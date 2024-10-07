@@ -1,0 +1,226 @@
+---
+title: "Etapa3"
+author: "Carlos Cuéllar Solís"
+date: "2024-10-07"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Equipo 7 Anton De la Garza Tamez - A01178310 Arturo Camacho Apolonio - A00838446 Carlos Cuéllar Solís - A01571619 Diego Octavio Arias Incháustegui - A00838285 Jorge Alfonso Andujo Valdez - A01563535
+
+10 de octubre del 2024
+
+Gpo 204
+
+## Parte 1
+
+Intervalos de Confianza
+
+-   Intervalos de Confianza para la Media
+
+sexo Media Muestral (X): 1.56 Desviación Estándar Muestral (S): 0.4969 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int1_1=1.56-((-qnorm(0.02, mean = 0, sd = 1))*(0.4969/sqrt(1977)))
+int1_2=1.56+((-qnorm(0.02, mean = 0, sd = 1))*(0.4969/sqrt(1977)))
+print(int1_1)
+print(int1_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int1_1 - 0.01, int1_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - sexo"))
+
+arrows(int1_1, 1, int1_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+edad Media Muestral (X): 45.51 Desviación Estándar Muestral (S): 16.29 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int2_1=45.51-((-qnorm(0.02, mean = 0, sd = 1))*(16.29/sqrt(1977)))
+int2_2=45.51+((-qnorm(0.02, mean = 0, sd = 1))*(16.29/sqrt(1977)))
+print(int2_1)
+print(int2_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int2_1 - 0.01, int2_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - edad"))
+
+arrows(int2_1, 1, int2_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+nivel Media Muestral (X): 4.49 Desviación Estándar Muestral (S): 1.99 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int3_1=4.49-((-qnorm(0.02, mean = 0, sd = 1))*(1.99/sqrt(1977)))
+int3_2=4.49+((-qnorm(0.02, mean = 0, sd = 1))*(1.99/sqrt(1977)))
+print(int3_1)
+print(int3_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int3_1 - 0.01, int3_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - nivel"))
+
+arrows(int3_1, 1, int3_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+anio Media Muestral (X): 3.47 Desviación Estándar Muestral (S): 1.30 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int4_1=3.47-((-qnorm(0.02, mean = 0, sd = 1))*(1.30/sqrt(1977)))
+int4_2=3.47+((-qnorm(0.02, mean = 0, sd = 1))*(1.30/sqrt(1977)))
+print(int4_1)
+print(int4_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int4_1 - 0.01, int4_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - anio"))
+
+arrows(int4_1, 1, int4_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+h_lec Media Muestral (X): 2.06 Desviación Estándar Muestral (S): 1.34 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int5_1=2.06-((-qnorm(0.02, mean = 0, sd = 1))*(1.34/sqrt(1977)))
+int5_2=2.06+((-qnorm(0.02, mean = 0, sd = 1))*(1.34/sqrt(1977)))
+print(int5_1)
+print(int5_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int5_1 - 0.01, int5_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - h_lec"))
+
+arrows(int5_1, 1, int5_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+mat_lec Media Muestral (X): 2.73 Desviación Estándar Muestral (S): 1.02 Tamaño de Muestra (n): 1977 Nivel de significancia (): 0.04 Intervalo de Confianza:
+
+```{r, echo=FALSE}
+int6_1=2.73-((-qnorm(0.02, mean = 0, sd = 1))*(1.02/sqrt(1977)))
+int6_2=2.73+((-qnorm(0.02, mean = 0, sd = 1))*(1.02/sqrt(1977)))
+print(int6_1)
+print(int6_2)
+
+plot(0, ylim = c(0, 1 + 1), xlim = c(int6_1 - 0.01, int6_2 + 0.01), yaxt = "n", ylab = "")
+axis(2, at = c(1), labels = c("Intervalo de Confianza para la Media - mat_lec"))
+
+arrows(int6_1, 1, int6_2, 1, angle = 90, code = 3, length = 0.1, lwd = 2)
+```
+
+-   Análisis de Regresión Lineal
+
+```{r, echo=FALSE}
+install_if_needed <- function(package) {
+  if (!requireNamespace(package, quietly = TRUE)) {
+    install.packages(package)
+  }
+}
+
+install_if_needed("dplyr")
+install_if_needed("ggplot2")
+install_if_needed("e1071")
+
+library(dplyr)
+library(ggplot2)
+library(e1071)
+
+M22 <- read.csv("Datos_molec_2022.csv")
+View(M22)
+
+M22_limpia <- M22[!duplicated(M22), ]
+M22_limpia <- na.omit(M22_limpia)
+View(M22_limpia)
+```
+
+sexo
+```{r, echo=FALSE}
+modelo <- lm(h_lec ~ sexo, data = M22_limpia)
+
+resumen_modelo <- summary(modelo)
+
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+pendiente_sexo <- coeficientes[2]
+
+r_squared <- resumen_modelo$r.squared
+
+cat("La ecuación de la regresión es: h_lec(sexo) =", intercepto, "+", pendiente_sexo, "* sexo\n")
+cat("El valor de R^2 es:", r_squared, "\n")
+
+plot(M22_limpia$sexo, M22_limpia$h_lec, main="Regresión Lineal entre sexo y h_lec", xlab="sexo", ylab="h_lec")
+abline(modelo, col="red", lwd=2)
+```
+
+edad
+```{r, echo=FALSE}
+modelo <- lm(h_lec ~ edad, data = M22_limpia)
+
+resumen_modelo <- summary(modelo)
+
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+pendiente_edad <- coeficientes[2]
+
+r_squared <- resumen_modelo$r.squared
+
+cat("La ecuación de la regresión es: h_lec(edad) =", intercepto, "+", pendiente_edad, "* edad\n")
+cat("El valor de R^2 es:", r_squared, "\n")
+
+plot(M22_limpia$edad, M22_limpia$h_lec, main="Regresión Lineal entre edad y h_lec", xlab="edad", ylab="h_lec")
+abline(modelo, col="red", lwd=2)
+```
+
+nivel
+```{r, echo=FALSE}
+modelo <- lm(h_lec ~ nivel, data = M22_limpia)
+
+resumen_modelo <- summary(modelo)
+
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+pendiente_nivel <- coeficientes[2]
+
+r_squared <- resumen_modelo$r.squared
+
+cat("La ecuación de la regresión es: h_lec(nivel) =", intercepto, "+", pendiente_nivel, "* nivel\n")
+cat("El valor de R^2 es:", r_squared, "\n")
+
+plot(M22_limpia$nivel, M22_limpia$h_lec, main="Regresión Lineal entre nivel y h_lec", xlab="nivel", ylab="h_lec")
+abline(modelo, col="red", lwd=2)
+```
+
+anio
+```{r, echo=FALSE}
+modelo <- lm(h_lec ~ anio, data = M22_limpia)
+
+resumen_modelo <- summary(modelo)
+
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+pendiente_anio <- coeficientes[2]
+
+r_squared <- resumen_modelo$r.squared
+
+cat("La ecuación de la regresión es: h_lec(anio) =", intercepto, "+", pendiente_anio, "* anio\n")
+cat("El valor de R^2 es:", r_squared, "\n")
+
+plot(M22_limpia$anio, M22_limpia$h_lec, main="Regresión Lineal entre anio y h_lec", xlab="anio", ylab="h_lec")
+abline(modelo, col="red", lwd=2)
+```
+
+mat_lec
+```{r, echo=FALSE}
+modelo <- lm(h_lec ~ mat_lec, data = M22_limpia)
+
+resumen_modelo <- summary(modelo)
+
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+pendiente_mat_lec <- coeficientes[2]
+
+r_squared <- resumen_modelo$r.squared
+
+cat("La ecuación de la regresión es: h_lec(mat_lec) =", intercepto, "+", pendiente_mat_lec, "* mat_lec\n")
+cat("El valor de R^2 es:", r_squared, "\n")
+
+plot(M22_limpia$mat_lec, M22_limpia$h_lec, main="Regresión Lineal entre mat_lec y h_lec", xlab="mat_lec", ylab="h_lec")
+abline(modelo, col="red", lwd=2)
+```
